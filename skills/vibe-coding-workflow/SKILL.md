@@ -168,7 +168,18 @@ Two drift patterns worth checking in any stack:
 
 ## Stage 4 — Code review
 
-**superpowers:requesting-code-review**, or a `code-reviewer` agent, or the host's review command.
+**Check for a project reviewer first.** If `.claude/agents/code-reviewer.md` exists in this repo,
+that one wins — it carries the stack's own rules and overrides the plugin's by name. Use it, not the
+generic one. Only when the project has none do you fall back to `vibe-workflow:code-reviewer`,
+**superpowers:requesting-code-review**, or the host's review command.
+
+```bash
+ls .claude/agents/code-reviewer.md 2>/dev/null && echo "project reviewer — use this one"
+```
+
+A project reviewer may be written as an *extension*: a short file holding only the stack's deltas,
+telling you to read the plugin's base first. Follow that instruction — the two are meant to apply
+together, and a project agent does not inherit from the plugin automatically.
 
 Receiving findings: **superpowers:receiving-code-review**. Verify each one before implementing it —
 reviewers are wrong sometimes, and agreeing with a wrong finding costs more than disputing it.

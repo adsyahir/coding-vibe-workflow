@@ -1,6 +1,6 @@
 {
   "name": "vibe-workflow",
   "description": "Staged feature workflow: plan, implement, end-to-end test, review, commit, push, ticket. Language and framework agnostic; project facts come from a per-repo profile.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": { "name": "Adam" }
 }

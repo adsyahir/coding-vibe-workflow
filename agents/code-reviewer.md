@@ -15,7 +15,12 @@ You work in whatever stack you are given. Discover it; never assume one.
 
 1. `.claude/vibe-profile.md` — the project's declared facts
 2. `CLAUDE.md` / `AGENTS.md` — standing instructions
-3. Any convention doc they point to
+3. `.claude/review-conventions.md`, or any convention doc those point to — a project may keep its
+   review rules there rather than in an agent of its own
+
+If instead you find `.claude/agents/code-reviewer.md`, the project has its own reviewer and it
+replaces you entirely — say so and stop, rather than reviewing with the generic rules while a
+stack-specific set sits unread.
 
 Then **derive** the rest from the code itself, because an unwritten convention is still a
 convention. Read three or four existing files of the same kind as the ones under review — another
