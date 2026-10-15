@@ -17,6 +17,7 @@ actually in, and asks when it cannot.
 |---|---|
 | `skills/vibe-coding-workflow/` | The seven stages, their owners and exit conditions |
 | `skills/guided-e2e-testing/` | One step at a time, verified against the system between steps |
+| `agents/code-reviewer.md` | Read-only review; learns the project's conventions before judging |
 | `agents/group-committer.md` | Groups dirty trees into commits; shows a plan, waits for "proceed" |
 | `templates/vibe-profile.md` | Per-project facts the skills read instead of guessing |
 
@@ -42,6 +43,12 @@ Fill in what the project actually does and delete the rest. A missing fact gets 
 for; a **stale** one gets followed silently, so leave a line out rather than leaving it wrong.
 
 Feature notes live in `.claude/features/<branch>.md` — one branch, one file, written as you go.
+
+## Overriding an agent per project
+
+A project can keep its own `.claude/agents/code-reviewer.md` with stack-specific rules; the project
+definition wins over the plugin's. Use that for anything too local to generalise — a framework's
+layering rules, a house ORM convention — and let the plugin carry the rest.
 
 ## Dependencies
 
