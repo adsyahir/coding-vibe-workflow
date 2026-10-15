@@ -1,0 +1,11 @@
+{
+  "name": "adam-workflow",
+  "owner": { "name": "Adam" },
+  "plugins": [
+    {
+      "source": "./",
+      "name": "vibe-workflow",
+      "description": "Staged feature workflow with human gates at every stage boundary."
+    }
+  ]
+}
